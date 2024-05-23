@@ -23,10 +23,10 @@ public class AuthCandidateUseCase {
     private String secretkey;
 
     @Autowired
-    CandidateRepository candidateRepository;
+    private CandidateRepository candidateRepository;
 
     @Autowired
-    PasswordEncoder passwordEncoder;
+    private PasswordEncoder passwordEncoder;
 
     public AuthCandidateResponseDTO execute(AuthCandidateRequestDTO authCandidateRequestDTO) throws AuthenticationException {
         var candidate = candidateRepository.findByUsername(authCandidateRequestDTO.username())

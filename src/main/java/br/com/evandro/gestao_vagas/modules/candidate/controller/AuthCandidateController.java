@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthCandidateController {
 
     @Autowired
-    AuthCandidateUseCase authCandidateUseCase;
+    private AuthCandidateUseCase authCandidateUseCase;
 
     @PostMapping("/auth")
     public ResponseEntity<Object> auth(@RequestBody AuthCandidateRequestDTO authCandidateRequestDTO){
